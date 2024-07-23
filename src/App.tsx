@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import dayjs from "dayjs";
 import calendar from "dayjs/plugin/calendar";
@@ -11,7 +11,7 @@ import Video from "./components/Video";
 dayjs.extend(calendar);
 dayjs.extend(relativeTime);
 
-type ResponseChannel = {
+export type ResponseChannel = {
   english_name: string;
   id: string;
   name: string;
@@ -21,7 +21,7 @@ type ResponseChannel = {
   type: string;
 };
 
-type ResponseChannelInfo = {
+export type ResponseChannelInfo = {
   banner: string;
   english_name: string;
   id: string;
@@ -33,7 +33,7 @@ type ResponseChannelInfo = {
   view_count: number;
 };
 
-type ResponseVideo = {
+export type ResponseVideo = {
   available_at: string;
   channel: ResponseChannel;
   duration: number;
@@ -75,7 +75,7 @@ export default function App() {
   });
 
   async function handleGetProfile(e: React.MouseEvent<HTMLElement>) {
-    setCurrentChannel(e.target.getAttribute("data-channelid"));
+    setCurrentChannel(e.currentTarget.getAttribute("data-channelid"));
     await queryClient.invalidateQueries({ queryKey: ["channel"] });
     await queryClient.refetchQueries({ queryKey: ["channel"] });
   }

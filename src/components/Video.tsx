@@ -1,6 +1,12 @@
 import dayjs from "dayjs";
+import { ResponseVideo } from "../App";
 
-export default function Video({ video, onClickGetProfile }) {
+type VideoParamsType = {
+  video: ResponseVideo,
+  onClickGetProfile: React.MouseEventHandler,
+}
+
+export default function Video({ video, onClickGetProfile }: VideoParamsType) {
   return (
     <article className="border">
       <p>{video.channel.english_name}</p>
