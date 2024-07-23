@@ -1,36 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, UseQueryResult } from "@tanstack/react-query";
 import dayjs from "dayjs";
+import { ResponseChannelInfo, ResponseVideo } from "../App";
 
-type ChannelParamsType = {
+type ChannelInfoParamsType = {
   channelId: string,
 }
 
-type ResponseChannel = {
-  english_name: string,
-  id: string,
-  name: string,
-  org: string,
-  photo: string,
-  suborg: string,
-  type: string
-}
-
-type ResponseVideo = {
-  available_at: string,
-  channel: ResponseChannel,
-  duration: number,
-  id: string,
-  live_viewers: number,
-  published_at: string,
-  start_scheduled: string,
-  status: string,
-  title: string,
-  topic_id: string,
-  type: string
-}
-
-export default function ChannelInfo({ channelId }: ChannelParamsType) {
-  const channel = useQuery({
+export default function ChannelInfo({ channelId }: ChannelInfoParamsType) {
+  const channel: UseQueryResult<ResponseChannelInfo, Error> = useQuery({
     queryKey: ["channel", "info"],
     queryFn: async () => await fetchChannel(channelId),
     retry: 0,
