@@ -1,30 +1,17 @@
-# React + TypeScript + Vite
+# HoloDash
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+HoloDash is a dashboard that summarizes recent, live, and upcoming YouTube streams for virtual YouTubers ([VTubers](https://virtualyoutuber.fandom.com/wiki/VTuber)) from [Hololive](https://hololivepro.com/en/).
+Data is retrieved from the [Holodex API](https://docs.holodex.net/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a Typescript/React portfolio project demonstrating basic consumption of a public REST API.
 
-## Expanding the ESLint configuration
+## Features
+- Live and upcoming streams for all Hololive VTubers are listed with links to the stream on YouTube or Holodex
+- Information such as the stream's live status, scheduled start date and time, and number of current viewers is displayed
+- Channel information and a list of recently completed streams for any Hololive member can be retrieved
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Roadmap
+- List of streams can be filtered in various ways include by date/time, region, group or generation, and more
+- Users can specify their favorites (their "oshis") and filter results accordingly
