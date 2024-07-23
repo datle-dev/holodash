@@ -75,7 +75,7 @@ export default function App() {
   });
 
   async function handleGetProfile(e: React.MouseEvent<HTMLElement>) {
-    setCurrentChannel(e.target.getAttribute("data-channelid"));
+    setCurrentChannel(e.currentTarget.getAttribute("data-channelid"));
     await queryClient.invalidateQueries({ queryKey: ["channel"] });
     await queryClient.refetchQueries({ queryKey: ["channel"] });
   }
