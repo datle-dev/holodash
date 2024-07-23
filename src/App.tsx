@@ -11,7 +11,7 @@ import Video from "./components/Video";
 dayjs.extend(calendar);
 dayjs.extend(relativeTime);
 
-type ResponseChannel = {
+export type ResponseChannel = {
   english_name: string;
   id: string;
   name: string;
@@ -21,7 +21,7 @@ type ResponseChannel = {
   type: string;
 };
 
-type ResponseChannelInfo = {
+export type ResponseChannelInfo = {
   banner: string;
   english_name: string;
   id: string;
@@ -33,7 +33,7 @@ type ResponseChannelInfo = {
   view_count: number;
 };
 
-type ResponseVideo = {
+export type ResponseVideo = {
   available_at: string;
   channel: ResponseChannel;
   duration: number;
