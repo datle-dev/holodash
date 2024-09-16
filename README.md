@@ -13,5 +13,5 @@ This is a Typescript/React portfolio project demonstrating basic consumption of 
 - Channel information and a list of recently completed streams for any Hololive member can be retrieved
 
 ## Roadmap
-- List of streams can be filtered in various ways include by date/time, region, group or generation, and more
-- Users can specify their favorites (their "oshis") and filter results accordingly
+- [ ]List of streams can be filtered in various ways include by date/time, region, group or generation, and more
+- [ ] Users can specify their favorites (their "oshis") and filter results accordingly
